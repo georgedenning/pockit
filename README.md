@@ -37,18 +37,18 @@ The accounts table stores information on the various accounts linked to your spe
 
 ## `expenses`
 The expenses table stores all of your expenses.
-| Field          | Type          | Description                                 |
-|----------------|---------------|---------------------------------------------|
-| `id`           | bigIncrements | Unique row identifier                       |
-| `name`         | string        | The name of the expense item                |
-| `description`  | text          | A brief description of the expense          |
-| `amount`       | decimal(10,4) | The cost of the expense                     |
-| `paid`         | decimal(10,4) | The amount paid towards the expense         |
-| `frequency`    | string        | `singular`, `weekly`, `monthly`, `yearly`                       |
-| `status`       | string        | pending, partial, sent, rejected, cancelled |
-| `recipient_id` | bigInteger    | The account ID (see accounts)               |
-| `due_at`       | timestamp     | When the expense is due to go out           |
-| `sent_at`      | timestamp     | When the expense was sent                   |
-| `created_at`   | timestamp     | Datetime the expense was created            |
-| `updated_at`   | timestamp     | Datetime the expense was updated            |
-| `deleted_at`   | timestamp     | Datetime the user was deleted               |
+| Field          | Type          | Description                                           |
+|----------------|---------------|-------------------------------------------------------|
+| `id`           | bigIncrements | Unique row identifier                                 |
+| `name`         | string        | The name of the expense item                          |
+| `description`  | text          | A brief description of the expense                    |
+| `amount`       | decimal(10,4) | The cost of the expense                               |
+| `paid`         | decimal(10,4) | The amount paid towards the expense                   |
+| `frequency`    | set           | `singular`, `weekly`, `monthly`, `yearly`             |
+| `status`       | set           | `pending`, `partial`, `sent`, `rejected`, `cancelled` |
+| `recipient_id` | bigInteger    | The account ID (see accounts)                         |
+| `due_at`       | timestamp     | When the expense is due to go out                     |
+| `sent_at`      | timestamp     | When the expense was sent                             |
+| `created_at`   | timestamp     | Datetime the expense was created                      |
+| `updated_at`   | timestamp     | Datetime the expense was updated                      |
+| `deleted_at`   | timestamp     | Datetime the user was deleted                         |
