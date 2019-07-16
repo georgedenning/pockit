@@ -3,17 +3,17 @@ Finance management system to monitor expenses, analyse spending patterns and imp
 
 ## `users`
 The users table stores user credentials and login information.
-| Fields              | Type               | Description                       |
-|---------------------|--------------------|-----------------------------------|
-| `id`                | bigIncrements      | Unique row identifier             |
-| `name`              | string             | Name of the user                  |
-| `email`             | string:unique      | Users' email address              |
-| `email_verified_at` | timestamp:nullable | Datetime of the user verification |
-| `password`          | string             | Users' password                   |
-| `remember_token`    | string             | Prevents cookie hijacking         |
-| `created_at`        | timestamp          | Datetime the user was created     |
-| `updated_at`        | timestamp          | Datetime the user was updated     |
-| `deleted_at`        | timestamp          | Datetime the user was deleted     |
+| Fields              | Type          | Description                       |
+|---------------------|---------------|-----------------------------------|
+| `id`                | bigIncrements | Unique row identifier             |
+| `name`              | string        | Name of the user                  |
+| `email`             | string:unique | Users' email address              |
+| `email_verified_at` | timestamp     | Datetime of the user verification |
+| `password`          | string        | Users' password                   |
+| `remember_token`    | string        | Prevents cookie hijacking         |
+| `created_at`        | timestamp     | Datetime the user was created     |
+| `updated_at`        | timestamp     | Datetime the user was updated     |
+| `deleted_at`        | timestamp     | Datetime the user was deleted     |
 
 ## `profiles`
 The profiles table stores additional information on users and accounts.
